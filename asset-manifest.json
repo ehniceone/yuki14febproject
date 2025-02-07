@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/yuki14febproject/static/css/main.44789be7.css",
-    "main.js": "/yuki14febproject/static/js/main.d55a87fb.js",
+    "main.js": "/yuki14febproject/static/js/main.b5c0968b.js",
     "static/media/for-you.gif": "/yuki14febproject/static/media/for-you.4a3ed5df80a452fdab54.gif",
     "static/media/salmon_dong_2.jpg": "/yuki14febproject/static/media/salmon_dong_2.b1a3126dea9035f39960.jpg",
     "static/media/sushiro.jpg": "/yuki14febproject/static/media/sushiro.210c8d42f0ca41dfb280.jpg",
@@ -38,10 +38,10 @@
     "static/media/movie_night.jpeg": "/yuki14febproject/static/media/movie_night.526025e9a01cacf6e1e0.jpeg",
     "index.html": "/yuki14febproject/index.html",
     "main.44789be7.css.map": "/yuki14febproject/static/css/main.44789be7.css.map",
-    "main.d55a87fb.js.map": "/yuki14febproject/static/js/main.d55a87fb.js.map"
+    "main.b5c0968b.js.map": "/yuki14febproject/static/js/main.b5c0968b.js.map"
   },
   "entrypoints": [
     "static/css/main.44789be7.css",
-    "static/js/main.d55a87fb.js"
+    "static/js/main.b5c0968b.js"
   ]
 }
