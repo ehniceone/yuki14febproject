@@ -1,7 +1,7 @@
 {
   "name": "valentines-app2",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://ehniceone.github.io/yuki14febproject",
   "dependencies": {
     "cra-template": "1.2.0",

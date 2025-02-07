@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import backgroundMusic from "./assets/music.mp3";
 import gif1 from "./assets/valentine.gif";
