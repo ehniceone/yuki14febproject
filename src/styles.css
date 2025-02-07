@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  background-color: #fef1f8; /* Soft pink pastel */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5rem;
+  color: #ff66b2;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Soft text shadow */
+}
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #ff80bf;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bg-pink { background-color: #ffd1dc; }
+.bg-purple { background-color: #e1bee7; }
+.bg-yellow { background-color: #fff9c4; }
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.yes-btn, .no-btn, .main-btn {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ff66b2;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.yes-btn:hover, .no-btn:hover, .main-btn:hover {
+  transform: scale(1.1); /* Cute scaling effect */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.no-btn {
+  background-color: #f8b3d0;
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  color: #ff66b2;
+  font-weight: bold;
+  animation: popupAnimation 1s ease-in-out;
+}
+
+@keyframes popupAnimation {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.gif {
+  margin-top: 20px;
+  width: 180px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.date-picker {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #ff66b2;
+  background-color: #fff3f6;
+  margin-top: 15px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ff66b2;
+  border-radius: 15px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #fff3f6;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  height: 100px;
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+.option:hover {
+  background-color: #ffebf5;
+  transform: scale(1.05);
+}
+
+.option.selected {
+  background-color: #ff66b2;
+  color: white;
+  transform: scale(1.05);
+}
+
+.option-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+
+}
+
+.main-btn {
+  background-color: #ff66b2;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.main-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.selection-page-heading {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5rem;
+  color: #ff66b2;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page h1 {
+  margin-top: 40px;
+  font-family: 'Fredoka One', cursive;
+}
+
+.page {
+  overflow-y: auto;
+}
+
+/* Receipt (not invoice) Styles */
+.invoice-container {
+  background: linear-gradient(to top, #f9f9f9 0%, #ffffff 100%);
+  width: 100%;
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px dashed #aaa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto Mono', monospace; /* Monospace font for that receipt look */
+  text-align: left;
+}
+
+.invoice-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #ff66b2;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.invoice-details {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+.invoice-details p {
+  margin: 8px 0;
+}
+
+.invoice-item {
+  display: flex;
+  align-items: flex-start; /* Aligns text to the top */
+  gap: 10px; /* Adds spacing between the icon/title and the list */
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 8px;
+}
+
+.invoice-item span {
+  min-width: 120px; /* Adjust as needed to align bullet points */
+  font-weight: bold;
+}
+
+.invoice-item div {
+  flex-grow: 1; /* Ensures the list takes up remaining space */
+}
+
+.invoice-footer {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+
+.invoice-footer span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for buttons */
+.invoice-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.invoice-buttons button {
+  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ff66b2;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 50px;
+  transition: transform 0.2s ease-in-out;
+  width: 48%;
+  border: none;
+}
+
+.invoice-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.separator {
+  margin: 20px 0;
+  border-top: 1px dotted #ddd;
+}
+
+@media (max-width: 600px) {
+  .invoice-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .invoice-buttons {
+    flex-direction: column;
+  }
+
+  .invoice-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.random-img {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.left {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bottom-media {
+  margin-top: 20px;
+  height: auto;
+  display: block;
+}
