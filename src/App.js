@@ -5,7 +5,7 @@ import backgroundMusic from "./assets/music.mp3";
 import gif1 from "./assets/valentine.gif";
 import gif2 from "./assets/thankyou.gif";
 import mynigga from "./assets/abc.gif";
-import thevideo from "./assets/for-you.mp4";
+import thevideo from "./assets/for-you.gif";
 import kuromi1 from "./assets/kuromi1.png";
 import kuromi2 from "./assets/kuromi2.png";
 import emailjs from "emailjs-com";
@@ -118,7 +118,7 @@ function PickDate({ date, setDate }) {
       <button className="main-btn" onClick={handleNext}>Next</button>
       {popup && <motion.div className="popup" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>{popup}</motion.div>}
     
-      <video src={thevideo} className="bottom-media" autoPlay loop muted playsInline style={{ width: '400px', height: 'auto' }} > Your browser does not support the video tag. </video>
+      <img src={thevideo} alt="Pick a date gif" className="bottom-media" />
     </div>
   );
 }
